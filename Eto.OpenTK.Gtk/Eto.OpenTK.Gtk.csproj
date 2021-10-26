@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp3.1;net461</TargetFrameworks>
+    <TargetFrameworks>net5.0</TargetFrameworks>
     <Title>OpenTK Gtk#3 implementation for Eto.Forms</Title>
     <Description>This provides the Gtk#3 implementation of Eto.OpenTK for Eto.Forms</Description>
     <DefineConstants Condition="!$(TargetFramework.StartsWith('net4'))">$(DefineConstants);OPENTK4</DefineConstants>
@@ -8,8 +8,8 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="OpenTK" Version="3.2.0" Condition="$(TargetFramework.StartsWith('net4'))" />
-    <PackageReference Include="OpenTK" Version="4.4.0" Condition="!$(TargetFramework.StartsWith('net4'))" />
-    <PackageReference Include="Eto.Platform.Gtk" Version="2.5.9" />
+    <PackageReference Include="OpenTK" Version="4.6.7" Condition="!$(TargetFramework.StartsWith('net4'))" />
+    <PackageReference Include="Eto.Platform.Gtk" Version="2.5.11" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Eto.OpenTK\Eto.OpenTK.csproj" />
