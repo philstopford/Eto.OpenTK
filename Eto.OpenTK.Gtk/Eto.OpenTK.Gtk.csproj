@@ -1,10 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net5.0</TargetFrameworks>
     <Title>OpenTK Gtk#3 implementation for Eto.Forms</Title>
     <Description>This provides the Gtk#3 implementation of Eto.OpenTK for Eto.Forms</Description>
     <DefineConstants Condition="!$(TargetFramework.StartsWith('net4'))">$(DefineConstants);OPENTK4</DefineConstants>
     <DefineConstants Condition="$(TargetFramework.StartsWith('net4'))">$(DefineConstants);OPENTK3</DefineConstants>
+    <TargetFramework>net7.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="OpenTK" Version="3.2.0" Condition="$(TargetFramework.StartsWith('net4'))" />
